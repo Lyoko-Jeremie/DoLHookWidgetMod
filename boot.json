@@ -1,0 +1,57 @@
+{
+  "name": "DoLHookWidget",
+  "version": "1.0.0",
+  "styleFileList": [
+  ],
+  "scriptFileList_earlyload": [
+  ],
+  "scriptFileList_inject_early": [
+  ],
+  "scriptFileList_preload": [
+    "DHW_shortCode.js"
+  ],
+  "scriptFileList": [
+  ],
+  "tweeFileList": [
+  ],
+  "imgFileList": [
+  ],
+  "replacePatchList": [
+  ],
+  "additionFile": [
+  ],
+  "additionBinaryFile": [
+  ],
+  "addonPlugin": [
+    {
+      "modName": "ReplacePatcher",
+      "addonName": "ReplacePatcherAddon",
+      "modVersion": "1.0.0",
+      "params": {
+        "js": [
+          {
+            "from": "\t\t\tconst widgetDef",
+            "to": "\t\t\tconst macroThis = this;\n\t\t\tconst widgetDef",
+            "fileName": "DoLWidget.js"
+          },
+          {
+            "from": "\t\t\t\t\t\t\tconst resFrag",
+            "to": "\t\t\t\t\t\t\twidgetCode = window.DHW_sc.beforeWidget(widgetCode, widgetName, macroThis);\n\t\t\t\t\t\t\tconst resFrag",
+            "fileName": "DoLWidget.js"
+          },
+          {
+            "from": "\t\t\t\t\t\t\tArray.from(resFrag.querySelectorAll(\".error\"))",
+            "to": "\t\t\t\t\t\t\twindow.DHW_sc.afterWidget(widgetCode, widgetName, macroThis);\n\t\t\t\t\t\t\tArray.from(resFrag.querySelectorAll(\".error\"))",
+            "fileName": "DoLWidget.js"
+          }
+        ]
+      }
+    }
+  ],
+  "dependenceInfo": [
+    {
+      "modName": "ModLoader",
+      "version": "^2.11.0"
+    }
+  ]
+}
