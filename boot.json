@@ -53,6 +53,10 @@
     {
       "modName": "ModLoader",
       "version": "^2.11.0"
+    },
+    {
+      "modName": "ReplacePatcher",
+      "version": "^1.0.0"
     }
   ]
 }
