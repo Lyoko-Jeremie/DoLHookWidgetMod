@@ -1,6 +1,6 @@
 {
   "name": "DoLHookWidget",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "styleFileList": [
   ],
   "scriptFileList_earlyload": [
@@ -33,17 +33,17 @@
           {
             "from": "\t\t\tconst widgetDef",
             "to": "\t\t\tconst macroThis = this;\n\t\t\tconst widgetDef",
-            "fileName": "DoLWidget.js"
+            "fileName": "dol-widget.js"
           },
           {
             "from": "\t\t\t\t\t\t\tconst resFrag",
             "to": "\t\t\t\t\t\t\twidgetCode = window.DHW_sc.beforeWidget(widgetCode, widgetName, macroThis);\n\t\t\t\t\t\t\tconst resFrag",
-            "fileName": "DoLWidget.js"
+            "fileName": "dol-widget.js"
           },
           {
             "from": "\t\t\t\t\t\t\tArray.from(resFrag.querySelectorAll(\".error\"))",
             "to": "\t\t\t\t\t\t\twindow.DHW_sc.afterWidget(widgetCode, widgetName, macroThis, resFrag);\n\t\t\t\t\t\t\tArray.from(resFrag.querySelectorAll(\".error\"))",
-            "fileName": "DoLWidget.js"
+            "fileName": "dol-widget.js"
           }
         ]
       }
